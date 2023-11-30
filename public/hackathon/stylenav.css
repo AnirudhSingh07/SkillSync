@@ -1,0 +1,33 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar
+{
+    height: 8%;
+    width: 100%;
+    background-color:rgb(10, 73, 209);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: right;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    /* background-color: #ddd; */
+    color: whitesmoke;
+    font-size: 20px;
+    margin-top: 3px;
+}
