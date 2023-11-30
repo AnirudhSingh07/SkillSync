@@ -1,0 +1,57 @@
+<!-- demographics.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/hackathon/styles.css">
+    <link rel="stylesheet" href="/public/hackathon/stylenav.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script> <!-- Correct order -->
+    <script src="/hackathon/script.js"></script>
+    <script src="/hackathon/d3dynamicscript.js"></script>
+    <script src="/public/hackathon/d3scriptdynamic.js"></script> <!-- Correct order -->
+    <title>Student Interests Visualization</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <a href="/pages/home.html">HOME</a>
+            <a href="/pages/assesment.html">ASSESMENT</a>
+            <a href="/pages/register.html">REGISTER</a>
+            <a href="/pages/login.html">LOGIN</a>
+            <a href="/pages/chart.html">CHARTS</a>
+        </ul>
+    </nav>
+    <div style="margin-top: 80px;">
+        <button onclick="drawChart('bar')">Bar Chart</button>
+        <button onclick="drawChart('pie')">Pie Chart</button>
+        <button onclick="drawChart('line')">Line Chart</button>
+    </div>
+    <br>
+
+    <div class="aboutus1">
+        <h1 style="padding-top:15px;">Recommended Personalized Career Paths</h1>
+        <h2 Based on the assesment</h2>
+        <br>
+        <div>
+        <h4 style="color: green;">STARTUP Based on Physics</h4>
+        <h4 style="color: green;">Higher Study in Business or Psychology</h4>
+        <h4 style="color: green;">Psychologist</h4>
+        <h4 style="color: green;">Author</h4>
+        </div>
+        </div>
+</body>
+</html>

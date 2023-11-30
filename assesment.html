@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/public/hackathon/styles1.css">
+    <link rel="stylesheet" href="/public/hackathon/stylenav.css">
+    <script>
+        let button = document.getElementById('main');
+        let handleEntry = async() =>
+        {
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const gender = document.getElementById('gender').value;
+            const physics = document.getElementById('physics').value;
+            const chemistry = document.getElementById('chemistry').value;
+            const economy = document.getElementById('economy').value;
+            const psychology = document.getElementById('psychology').value;
+            const maths = document.getElementById('maths').value;
+            const business = document.getElementById('business').value;
+            const politics = document.getElementById('politics').value;
+            const sports = document.getElementById('sports').value;
+            const path = document.getElementById('careerPath').value;
+            const json = {name,age,gender,physics,chemistry,maths,economy,psychology,business,politics,sports,path};
+            localStorage.setItem('json',json);
+            location.href="/chart.html"
+            console.log('hehe')
+        }
+        button.onclick = handleEntry;
+        console.log('hehe')
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <a href="/pages/home.html">HOME</a>
+            <a href="/pages/assesment.html">ASSESMENT</a>
+            <a href="/pages/register.html">REGISTER</a>
+            <a href="/pages/login.html">LOGIN</a>
+            <a href="/pages/chart.html">CHARTS</a>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <h1>Student Assessment</h1>
+        <div action="#" method="post" id="assessmentForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="physics">Interest in Physics (1-5):</label>
+            <input type="number" id="physics" name="physics" min="1" max="5" required>
+
+            <label for="chemistry">Interest in Chemistry (1-5):</label>
+            <input type="number" id="chemistry" name="chemistry" min="1" max="5" required>
+
+            <label for="economy">Interest in Economy (1-5):</label>
+            <input type="number" id="economy" name="economy" min="1" max="5" required>
+
+            <label for="psychology">Interest in Psychology (1-5):</label>
+            <input type="number" id="psychology" name="psychology" min="1" max="5" required>
+
+            <label for="maths">Interest in Maths (1-5):</label>
+            <input type="number" id="maths" name="maths" min="1" max="5" required>
+
+            <label for="Business">Interest in Business (1-5):</label>
+            <input type="number" id="business" name="business" min="1" max="5" required>
+
+            <label for="Politics">Interest in Politics (1-5):</label>
+            <input type="number" id="politics" name="politics" min="1" max="5" required>
+
+            <label for="sports">Interest in Sports (1-5):</label>
+            <input type="number" id="sports" name="sports" min="1" max="5" required>
+
+            <label for="careerPath">Preferred Career Path:</label>
+            <select id="careerPath" name="careerPath" required>
+                <option value="mechengineering"> Mechanical Engineering</option>
+                <option value="civengineering"> Civil Engineering</option>
+                <option value="medical">Medical</option>
+                <option value="finance">Finance</option>
+                <option value="technology">Technology</option>
+                <option value="government job">Government Job</option>
+                <option value="sports">Sports</option>
+                <option value="law">Law</option>
+                <option value="Politics">Politics</option>
+                <option value="AI">AI</option>
+                <option value="Manufacturing">Manufacturing Sector</option>
+                <option value="Teacher">Teacher / Educator</option>
+                <option value="Startup">Startup / Business</option>
+                <option value="Designing">Designing</option>
+                <option value="Developer">Developer</option>
+                <option value="Hacker">Ethical Hacker</option>
+            </select>
+            <a href="/pages/chart.html"><button type="button">Submit</button></a>
+        </div>
+    </div>
+
+<script src="/hackathon/backendscript.js"></script>
+<script src="/hackathon/script.js"></script>
+<script src="/pages/navbar.js"></script>
+   
+</body>
+</html>
